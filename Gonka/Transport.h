@@ -2,16 +2,16 @@
 #include <string>
 #include <iostream>
 
-//#ifdef GonkaDinamicLab_EXPORTS
-//#define GonkaDinamicLab_API __declspec(dllexport)
-//#else
-//#define GonkaDinamicLab_API __declspec(dllimport)
-//#endif
+#ifdef GonkaDinamicLab_EXPORTS
+#define GonkaDinamicLab_API __declspec(dllexport)
+#else
+#define GonkaDinamicLab_API __declspec(dllimport)
+#endif
 
 namespace TransportOfRace
 {
 
-	class /*GonkaDinamicLab_API*/ Transport
+	class GonkaDinamicLab_API Transport
 	{
 	protected:
 		std::string transportName_ = "Транспорт"; //имя
